@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from "url";
+// import { fileURLToPath, URL } from "url";
 import { resolve } from "path";
 
 import { defineConfig } from "vite";
@@ -6,11 +6,11 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./lib", import.meta.url)),
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     "@": fileURLToPath(new URL("./lib", import.meta.url)),
+  //   },
+  // },
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points

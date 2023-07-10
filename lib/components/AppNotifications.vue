@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { notifications, removeNotification, removeNotifications } from '@/composables/useNotifications';
+import { notifications, removeNotification, removeNotifications } from "../composables/useNotifications";
 
 const props = withDefaults(
-	defineProps<{
-		removeAllMessage?: string | (() => string);
-	}>(),
-	{
-		removeAllMessage: 'Remove all',
-	},
+  defineProps<{
+    removeAllMessage?: string | (() => string);
+  }>(),
+  {
+    removeAllMessage: "Remove all",
+  }
 );
 </script>
 
@@ -61,7 +61,11 @@ const props = withDefaults(
 		margin-bottom 0.6rem
 		box-shadow rgba(0, 0, 0, 0.3) 0px 0px 5px
 		background rgb(240, 240, 240)
-		flex(row, space-between, start, 0.6rem)
+		display flex
+		flex-direction row
+		justify-content space-between
+		align-items start
+		gap 0.6rem
 
 		&.notification-type-info
 			border-left-color rgb(1, 87, 155)

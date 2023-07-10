@@ -9,11 +9,12 @@ yarn add @gianrase/vue3-notifications
 Add dependencies to your `main.js`:
 
 ```javascript
-import { createApp } from 'vue'
-import AppNotifications from '@gianrase/vue3-notifications'
+import { createApp } from 'vue';
+import AppNotifications from '@gianrase/vue3-notifications';
+import "@gianrase/vue3-notifications/style.css";
 
-const app = createApp({...})
-app.use(AppNotifications)
+const app = createApp({...});
+app.use(AppNotifications);
 ```
 
 Add the global component to your `App.vue`:

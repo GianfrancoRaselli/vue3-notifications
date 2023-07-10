@@ -1,6 +1,6 @@
 {
   "name": "@gianrase/vue3-notifications",
-  "version": "1.0.0",
+  "version": "1.0.15",
   "description": "Easy-configurable Vue3 notification system.",
   "type": "module",
   "files": [
@@ -11,10 +11,12 @@
   "exports": {
     ".": {
       "import": "./dist/vue3-notifications.js",
-      "require": "./dist/vue3-notifications.umd.cjs"
-    }
+      "require": "./dist/vue3-notifications.umd.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
   },
-  "types": "./dist/types/Notifications.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "types": "vue-tsc "
