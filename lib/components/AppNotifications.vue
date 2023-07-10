@@ -64,7 +64,7 @@ const props = withDefaults(
 		display flex
 		flex-direction row
 		justify-content space-between
-		align-items start
+		align-items center
 		gap 0.6rem
 
 		&.notification-type-info
@@ -83,6 +83,7 @@ const props = withDefaults(
 			cursor pointer
 			font-size 1.1rem
 			border 0
+			align-self start
 
 	.btn-remove-all
 		cursor pointer
