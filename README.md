@@ -1,7 +1,7 @@
 # Vue3 Notifications
 
 <p align="center">
-  <img src="https://drive.google.com/file/d/1v1a2AGNRrZ2i5nX1Y0DNbvK_KZCrK0ZS/view?usp=sharing">
+  <img src="https://i.postimg.cc/8cYh6PWr/notifications-example.png">
 </p>
 
 ## Setup
@@ -26,7 +26,7 @@ app.use(AppNotifications);
 Add the global component to your `App.vue`:
 
 ```vue
-<AppNotifications removeAllMessage="Remove all" />
+<AppNotifications removeAllMessage='Remove all' />
 ```
 
 | Name             | Type                    | Default      | Description                                                         |
@@ -38,7 +38,7 @@ Add the global component to your `App.vue`:
 Trigger notifications from any file:
 
 ```javascript
-import { addNotification } from "@gianrase/vue3-notifications";
+import { addNotification } from '@gianrase/vue3-notifications';
 
 addNotification(message, type, timeout);
 ```
