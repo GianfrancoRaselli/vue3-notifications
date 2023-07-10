@@ -1,4 +1,10 @@
-# Setup
+# Vue3 Notifications
+
+<p align="center">
+  <img src="https://drive.google.com/file/d/1v1a2AGNRrZ2i5nX1Y0DNbvK_KZCrK0ZS/view?usp=sharing">
+</p>
+
+## Setup
 
 ```bash
 npm install --save @gianrase/vue3-notifications
@@ -11,7 +17,7 @@ Add dependencies to your `main.js`:
 ```javascript
 import { createApp } from 'vue';
 import AppNotifications from '@gianrase/vue3-notifications';
-import "@gianrase/vue3-notifications/style.css";
+import '@gianrase/vue3-notifications/style.css';
 
 const app = createApp({...});
 app.use(AppNotifications);
@@ -27,7 +33,7 @@ Add the global component to your `App.vue`:
 | ---------------- | ----------------------- | ------------ | ------------------------------------------------------------------- |
 | removeAllMessage | string / (() => string) | 'Remove all' | The message that the 'Remove All Notifications' button will display |
 
-# Usage
+## Usage
 
 Trigger notifications from any file:
 
