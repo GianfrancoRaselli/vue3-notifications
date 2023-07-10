@@ -1,6 +1,7 @@
 {
   "name": "@gianrase/vue3-notifications",
   "version": "1.0.0",
+  "description": "Easy-configurable Vue3 notification system.",
   "type": "module",
   "files": [
     "dist"
@@ -13,11 +14,22 @@
       "require": "./dist/vue3-notifications.umd.cjs"
     }
   },
-  "types": "./dist/types/Notifications.ts",
+  "types": "./dist/types/Notifications.d.ts",
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "types": "vue-tsc "
   },
+  "keywords": [
+    "web",
+    "front-end",
+    "vue",
+    "vue3",
+    "notification",
+    "notifications",
+    "vue-notifications"
+  ],
+  "author": "Gianfranco Raselli",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GianfrancoRaselli/vue3-notifications.git"

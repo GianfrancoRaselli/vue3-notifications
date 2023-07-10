@@ -38,6 +38,6 @@ addNotification(message, type, timeout);
 
 | Name    | Type                                     | Default | Description                                                                                                                |
 | ------- | ---------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
-| message | string / (() => string)                  |         | The message of the notification                                                                                            |
+| message | string / (() => string)                  | none    | The message of the notification                                                                                            |
 | type    | 'info' / 'success' / 'warning' / 'error' | 'info'  | 'info' = blue notification / 'success' = green notification / 'warning' = yellow notification / 'error' = red notification |
 | timeout | number                                   | 15000   | The amount of time the notification will be displayed on the screen in milliseconds                                        |
