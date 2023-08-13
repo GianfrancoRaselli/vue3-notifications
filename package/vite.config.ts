@@ -8,13 +8,13 @@ export default defineConfig({
   plugins: [vue()],
   // resolve: {
   //   alias: {
-  //     "@": fileURLToPath(new URL("./lib", import.meta.url)),
+  //     "@": fileURLToPath(new URL("./src", import.meta.url)),
   //   },
   // },
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, "lib/index.ts"),
+      entry: resolve(__dirname, "src/index.ts"),
       name: "Vue3Notifications",
       // the proper extensions will be added
       fileName: "vue3-notifications",
