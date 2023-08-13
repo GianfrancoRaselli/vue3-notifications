@@ -27,7 +27,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 			:key='notification.id',
 			:class='lightMode ? "v3n-notification-type-" + notification.type : ["v3n-notification-dark", "v3n-notification-type-" + notification.type + "-dark"]'
 		)
-			span(v-text='removeAllMessage')
+			span(v-text='typeof notification.message === "string" ? notification.message : notification.message()')
 			button.v3n-btn-cross(
 				type='button',
 				:class='{ "v3n-btn-cross-dark": !lightMode }',
@@ -45,12 +45,8 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 <style lang="stylus" scoped>
 $main-color = #000000
 $main-dark-color = #eeeeee
-$secondary-color = #777777
-$secondary-dark-color = #afafaf
-$bg-color = #ffffff
-$bg-dark-color = #363849
-$bg-secondary-color = #f1f1f1
-$bg-secondary-dark-color = #424252
+$bg-color = #D5D5D5
+$bg-dark-color = #353643
 
 .v3n-notifications
 	position fixed
@@ -81,9 +77,9 @@ $bg-secondary-dark-color = #424252
 		border-left-style solid
 		border-radius 0.5rem
 		margin-bottom 0.6rem
-		box-shadow rgba(0, 0, 0, 0.3) 0px 0px 5px
+		box-shadow #0000004d 0px 0px 5px
 		color $main-color
-		background-color $bg-secondary-color
+		background-color $bg-color
 		display flex
 		flex-direction row
 		justify-content space-between
@@ -91,8 +87,9 @@ $bg-secondary-dark-color = #424252
 		gap 0.6rem
 
 		&-dark
+			box-shadow #c8c8c84d 0px 0px 5px
 			color $main-dark-color
-			background-color $bg-secondary-dark-color
+			background-color $bg-dark-color
 
 		&.v3n-notification-type-info
 			border-left-color #01579B
@@ -122,13 +119,13 @@ $bg-secondary-dark-color = #424252
 			cursor pointer
 			font-size 1.09rem
 			border 0
-			color #3e3a3a
-			background-color $bg-secondary-color
+			color #2E2B2B
+			background-color $bg-color
 			align-self start
 
 			&-dark
-				color #dedede
-				background-color $bg-secondary-dark-color
+				color #E2E2E2
+				background-color $bg-dark-color
 
 	.v3n-btn-remove-all
 		cursor pointer
@@ -137,9 +134,9 @@ $bg-secondary-dark-color = #424252
 		border 0
 		border-radius 0.2rem
 		color #002f88
-		background-color $bg-secondary-color
+		background-color $bg-color
 
 		&-dark
 			color $main-dark-color
-			background-color $bg-secondary-dark-color
+			background-color $bg-dark-color
 </style>

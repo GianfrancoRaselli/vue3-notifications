@@ -10,3 +10,8 @@ addNotification('Error', 'error', 300000);
 <template lang="pug">
 AppNotifications
 </template>
+
+<style lang="stylus">
+// html
+//   background-color #424252
+</style>

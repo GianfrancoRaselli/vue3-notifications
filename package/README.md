@@ -26,12 +26,13 @@ app.use(AppNotifications);
 Add the global component to your `App.vue`:
 
 ```vue
-<AppNotifications removeAllMessage='Remove all' />
+<AppNotifications removeAllMessage="Remove all" :lightMode="true" />
 ```
 
-| Name             | Type                    | Default      | Description                                                         |
-| ---------------- | ----------------------- | ------------ | ------------------------------------------------------------------- |
-| removeAllMessage | string / (() => string) | 'Remove all' | The message that the 'Remove All Notifications' button will display |
+| Name             | Type                      | Default      | Description                                                         |
+| ---------------- | ------------------------- | ------------ | ------------------------------------------------------------------- |
+| removeAllMessage | string / (() => string)   | 'Remove all' | The message that the 'Remove All Notifications' button will display |
+| lightMode        | boolean / (() => boolean) | true         | Choose between light and dark mode                                  |
 
 ## Usage
 
