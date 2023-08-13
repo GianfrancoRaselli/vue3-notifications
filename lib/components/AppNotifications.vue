@@ -12,16 +12,16 @@ const props = withDefaults(
 </script>
 
 <template lang="pug">
-.notifications
-	transition-group(name='notification')
-		.notification(
+.v3n-notifications
+	transition-group(name='v3n-notification')
+		.v3n-notification(
 			v-for='notification in notifications',
 			:key='notification.id',
-			:class='`notification-type-${notification.type}`'
+			:class='`v3n-notification-type-${notification.type}`'
 		)
 			span(v-text='typeof notification.message === "string" ? notification.message : notification.message()')
-			button.btn-cross(type='button', @click='removeNotification(notification.id)') X
-		button.btn-remove-all(
+			button.v3n-btn-cross(type='button', @click='removeNotification(notification.id)') X
+		button.v3n-btn-remove-all(
 			v-if='notifications.length > 0',
 			type='button',
 			@click='removeNotifications',
@@ -30,25 +30,25 @@ const props = withDefaults(
 </template>
 
 <style lang="stylus" scoped>
-.notifications
+.v3n-notifications
 	position fixed
 	bottom 0.6rem
 	right 0.4rem
 	z-index 10000
 
-	.notification-enter-active
-	.notification-leave-active
+	.v3n-notification-enter-active
+	.v3n-notification-leave-active
 		transition all 0.5s ease
 
-	.notification-enter-from
-	.notification-leave-to
+	.v3n-notification-enter-from
+	.v3n-notification-leave-to
 		opacity 0
 		transform translateX(100%)
 
-	.notification-move
+	.v3n-notification-move
 		transition transform 0.8s ease
 
-	.notification
+	.v3n-notification
 		font-size 1.1rem
 		word-break break-word
 		word-wrap break-word
@@ -67,25 +67,25 @@ const props = withDefaults(
 		align-items center
 		gap 0.6rem
 
-		&.notification-type-info
+		&.v3n-notification-type-info
 			border-left-color rgb(1, 87, 155)
 
-		&.notification-type-success
+		&.v3n-notification-type-success
 			border-left-color rgb(27, 94, 32)
 
-		&.notification-type-warning
+		&.v3n-notification-type-warning
 			border-left-color rgb(230, 81, 0)
 
-		&.notification-type-error
+		&.v3n-notification-type-error
 			border-left-color rgb(198, 40, 40)
 
-		.btn-cross
+		.v3n-btn-cross
 			cursor pointer
 			font-size 1.1rem
 			border 0
 			align-self start
 
-	.btn-remove-all
+	.v3n-btn-remove-all
 		cursor pointer
 		float right
 		color #002f88
