@@ -43,10 +43,10 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 </template>
 
 <style lang="stylus" scoped>
-$main-color = #000000
-$main-dark-color = #eeeeee
-$bg-color = #D5D5D5
-$bg-dark-color = #353643
+$v3n-main-color = #000000
+$v3n-main-dark-color = #eeeeee
+$v3n-bg-color = #D5D5D5
+$v3n-bg-dark-color = #353643
 
 .v3n-notifications
 	position fixed
@@ -78,8 +78,8 @@ $bg-dark-color = #353643
 		border-radius 0.5rem
 		margin-bottom 0.6rem
 		box-shadow #0000004d 0px 0px 5px
-		color $main-color
-		background-color $bg-color
+		color $v3n-main-color
+		background-color $v3n-bg-color
 		display flex
 		flex-direction row
 		justify-content space-between
@@ -87,9 +87,9 @@ $bg-dark-color = #353643
 		gap 0.6rem
 
 		&-dark
-			box-shadow #c8c8c84d 0px 0px 5px
-			color $main-dark-color
-			background-color $bg-dark-color
+			box-shadow #a0a0a01a 0px 0px 5px
+			color $v3n-main-dark-color
+			background-color $v3n-bg-dark-color
 
 		&.v3n-notification-type-info
 			border-left-color #01579B
@@ -120,12 +120,12 @@ $bg-dark-color = #353643
 			font-size 1.09rem
 			border 0
 			color #2E2B2B
-			background-color $bg-color
+			background-color $v3n-bg-color
 			align-self start
 
 			&-dark
 				color #E2E2E2
-				background-color $bg-dark-color
+				background-color $v3n-bg-dark-color
 
 	.v3n-btn-remove-all
 		cursor pointer
@@ -134,9 +134,9 @@ $bg-dark-color = #353643
 		border 0
 		border-radius 0.2rem
 		color #002f88
-		background-color $bg-color
+		background-color $v3n-bg-color
 
 		&-dark
-			color $main-dark-color
-			background-color $bg-dark-color
+			color $v3n-main-dark-color
+			background-color $v3n-bg-dark-color
 </style>
