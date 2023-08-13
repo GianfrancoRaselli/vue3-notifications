@@ -1,9 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import AppNotifications from '../../package';
-import '../../package/dist/style.css';
+import AppNotifications from '../../package/src/components/AppNotifications.vue';
 
 const app = createApp(App);
-app.use(AppNotifications);
+
+app.component('AppNotifications', AppNotifications);
+
 app.mount('#app');

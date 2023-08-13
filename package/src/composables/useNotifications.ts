@@ -6,17 +6,17 @@ const notifications: Notifications = reactive([]);
 
 let id = 0;
 
-const addNotification = (message: NotificationMessage, type: NotificationType = 'info', timeout = 15000) => {
-	notifications.push({ id, message, type, subscription: addTimeout(id, timeout) });
-	id++;
-};
-
 function addTimeout(id: number, timeout: number) {
 	if (timeout)
 		return setTimeout(() => {
 			removeNotification(id);
 		}, timeout);
 }
+
+const addNotification = (message: NotificationMessage, type: NotificationType = 'info', timeout = 15000) => {
+	notifications.push({ id, message, type, subscription: addTimeout(id, timeout) });
+	id++;
+};
 
 const removeNotification = (id: number) => {
 	const index = notifications.findIndex(item => item.id === id);
