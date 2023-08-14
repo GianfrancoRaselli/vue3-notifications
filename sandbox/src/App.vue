@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { addNotification } from '../../package/src/composables/useNotifications';
+import { addNotification } from '../../package';
 
 addNotification('Información', 'info', 300000);
 addNotification('Éxito', 'success', 300000);

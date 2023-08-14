@@ -43,11 +43,6 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 </template>
 
 <style lang="stylus" scoped>
-$v3n-main-color = #000000
-$v3n-main-dark-color = #eeeeee
-$v3n-bg-color = #D5D5D5
-$v3n-bg-dark-color = #353643
-
 .v3n-notifications
 	position fixed
 	bottom 0.6rem
@@ -77,9 +72,9 @@ $v3n-bg-dark-color = #353643
 		border-left-style solid
 		border-radius 0.5rem
 		margin-bottom 0.6rem
-		box-shadow #0000004d 0px 0px 5px
-		color $v3n-main-color
-		background-color $v3n-bg-color
+		box-shadow var(--v3nNotificationShadow) 0px 0px 5px
+		color var(--v3nMain)
+		background-color var(--v3nBg)
 		display flex
 		flex-direction row
 		justify-content space-between
@@ -87,45 +82,45 @@ $v3n-bg-dark-color = #353643
 		gap 0.6rem
 
 		&-dark
-			box-shadow #a0a0a01a 0px 0px 5px
-			color $v3n-main-dark-color
-			background-color $v3n-bg-dark-color
+			box-shadow var(--v3nNotificationShadowDark) 0px 0px 5px
+			color var(--v3nMainDark)
+			background-color var(--v3nBgDark)
 
 		&.v3n-notification-type-info
-			border-left-color #01579B
+			border-left-color var(--v3nBorderLeftInfo)
 
 			&-dark
-				border-left-color #252cf4
+				border-left-color var(--v3nBorderLeftInfoDark)
 
 		&.v3n-notification-type-success
-			border-left-color #1B5E20
+			border-left-color var(--v3nBorderLeftSuccess)
 
 			&-dark
-				border-left-color #1cd509
+				border-left-color var(--v3nBorderLeftSuccessDark)
 
 		&.v3n-notification-type-warning
-			border-left-color #E65100
+			border-left-color var(--v3nBorderLeftWarning)
 
 			&-dark
-				border-left-color #e88400
+				border-left-color var(--v3nBorderLeftWarningDark)
 
 		&.v3n-notification-type-error
-			border-left-color #C62828
+			border-left-color var(--v3nBorderLeftError)
 
 			&-dark
-				border-left-color #f42525
+				border-left-color var(--v3nBorderLeftErrorDark)
 
 		.v3n-btn-cross
 			cursor pointer
 			font-size 1.09rem
 			border 0
-			color #2E2B2B
-			background-color $v3n-bg-color
+			color var(--v3nBtnCross)
+			background-color var(--v3nBg)
 			align-self start
 
 			&-dark
-				color #E2E2E2
-				background-color $v3n-bg-dark-color
+				color var(--v3nBtnCrossDark)
+				background-color var(--v3nBgDark)
 
 	.v3n-btn-remove-all
 		cursor pointer
@@ -133,10 +128,10 @@ $v3n-bg-dark-color = #353643
 		padding 0.3rem 0.8rem
 		border 0
 		border-radius 0.2rem
-		color #002f88
-		background-color $v3n-bg-color
+		color var(--v3nRemoveAll)
+		background-color var(--v3nBg)
 
 		&-dark
-			color $v3n-main-dark-color
-			background-color $v3n-bg-dark-color
+			color var(--v3nRemoveAllDark)
+			background-color var(--v3nBgDark)
 </style>

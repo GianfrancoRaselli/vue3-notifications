@@ -1,6 +1,6 @@
 import { reactive } from 'vue';
 
-import type { Notifications, NotificationMessage, NotificationType } from '../types/Notifications';
+import type { Notifications, NotificationMessage, NotificationType } from '../types/notifications';
 
 const notifications: Notifications = reactive([]);
 
