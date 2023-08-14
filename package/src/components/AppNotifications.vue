@@ -128,10 +128,10 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 		padding 0.3rem 0.8rem
 		border 0
 		border-radius 0.2rem
-		color var(--v3nRemoveAll)
+		color var(--v3nBtnRemoveAll)
 		background-color var(--v3nBg)
 
 		&-dark
-			color var(--v3nRemoveAllDark)
+			color var(--v3nBtnRemoveAllDark)
 			background-color var(--v3nBgDark)
 </style>
