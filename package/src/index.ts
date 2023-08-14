@@ -27,7 +27,7 @@ function getOptions(userOptions?: Options) {
 	return options;
 }
 
-function setColors(colors: Options['colors']) {
+function setRootColors(colors: Options['colors']) {
 	const root = document.querySelector(':root') as HTMLElement;
 	for (const key in colors) {
 		const colorValue = colors[key];
@@ -37,7 +37,7 @@ function setColors(colors: Options['colors']) {
 
 export default (app: App, userOptions?: Options) => {
 	const options = getOptions(userOptions);
-	setColors(options.colors);
+	setRootColors(options.colors);
 	app.component('AppNotifications', AppNotifications);
 };
 
