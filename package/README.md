@@ -12,7 +12,7 @@ npm install --save @gianrase/vue3-notifications
 yarn add @gianrase/vue3-notifications
 ```
 
-Add dependencies to your `main.js`:
+Add the vue3-notifications dependencies to your `main.js`:
 
 ```javascript
 import { createApp } from 'vue';
