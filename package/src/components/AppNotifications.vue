@@ -44,10 +44,14 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 
 <style lang="stylus" scoped>
 .v3n-notifications
+	font-size 1rem
 	position fixed
 	bottom 0.6rem
 	right 0.4rem
 	z-index 10000
+
+	@media (max-width: 720px)
+		font-size 1.5rem
 
 	.v3n-notification-enter-active
 	.v3n-notification-leave-active
@@ -62,16 +66,16 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 		transition transform 0.8s ease
 
 	.v3n-notification
-		font-size 1.03rem
+		font-size 1.03em
 		word-break break-word
 		word-wrap break-word
-		width 25rem
+		width 22em
 		max-width 100%
-		padding 1rem
-		border-left-width 0.6rem
+		padding 1em
+		border-left-width 0.6em
 		border-left-style solid
-		border-radius 0.5rem
-		margin-bottom 0.6rem
+		border-radius 0.5em
+		margin-bottom 0.6em
 		box-shadow var(--v3nNotificationShadow) 0px 0px 5px
 		color var(--v3nMain)
 		background-color var(--v3nBg)
@@ -79,7 +83,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 		flex-direction row
 		justify-content space-between
 		align-items center
-		gap 0.6rem
+		gap 0.6em
 
 		&-dark
 			box-shadow var(--v3nNotificationShadowDark) 0px 0px 5px
@@ -112,7 +116,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 
 		.v3n-btn-cross
 			cursor pointer
-			font-size 1.09rem
+			font-size 1.09em
 			border 0
 			color var(--v3nBtnCross)
 			background-color var(--v3nBg)
@@ -125,9 +129,9 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 	.v3n-btn-remove-all
 		cursor pointer
 		float right
-		padding 0.3rem 0.8rem
+		padding 0.3em 0.8em
 		border 0
-		border-radius 0.2rem
+		border-radius 0.2em
 		color var(--v3nBtnRemoveAll)
 		background-color var(--v3nBg)
 
