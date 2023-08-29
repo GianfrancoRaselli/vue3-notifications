@@ -51,7 +51,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 	z-index 10000
 
 	@media (max-width: 720px)
-		font-size 1.5rem
+		font-size 1.05rem
 
 	.v3n-notification-enter-active
 	.v3n-notification-leave-active
@@ -69,9 +69,8 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 		font-size 1.03em
 		word-break break-word
 		word-wrap break-word
-		width 22em
-		max-width 100%
-		padding 1em
+		width 20em
+		padding 0.8em
 		border-left-width 0.6em
 		border-left-style solid
 		border-radius 0.5em
@@ -128,6 +127,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 
 	.v3n-btn-remove-all
 		cursor pointer
+		font-size 0.9em
 		float right
 		padding 0.3em 0.8em
 		border 0
