@@ -11,15 +11,14 @@ function getOptions(userOptions?: Options) {
 	if (userOptions) {
 		for (const categoryName in defaultOptions) {
 			if (userOptions[categoryName]) {
-				if (typeof userOptions[categoryName] === 'string') {
-					// set string
-					options[categoryName] = userOptions[categoryName];
-				} else {
-					// set array
+				if (typeof userOptions[categoryName] === 'object') {
 					for (const key in userOptions[categoryName]) {
 						const value = userOptions[categoryName][key];
 						if (value) options[categoryName][key] = value;
 					}
+				} else {
+					const value = userOptions[categoryName];
+					if (value) options[categoryName] = value;
 				}
 			}
 		}

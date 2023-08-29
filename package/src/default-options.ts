@@ -1,7 +1,7 @@
 import type { Options } from './types/options';
 
 const options: Options = {
-	defaultNotificationTimeout: 7000,
+	defaultNotificationTimeout: 6000,
 	colors: {
 		main: '#000000',
 		mainDark: 'rgba(255, 255, 255, .87)',
