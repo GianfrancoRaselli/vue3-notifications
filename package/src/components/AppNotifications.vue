@@ -34,7 +34,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 				@click='removeNotification(notification.id)'
 			) X
 		button.v3n-btn-remove-all(
-			v-if='notifications.length > 0',
+			v-if='notifications.length > 1',
 			type='button',
 			:class='{ "v3n-btn-remove-all-dark": !lightMode }',
 			@click='removeNotifications',
