@@ -127,7 +127,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 
 	.v3n-btn-remove-all
 		cursor pointer
-		font-size 0.97em
+		font-size 0.98em
 		float right
 		padding 0.3em 0.8em
 		border 0
