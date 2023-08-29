@@ -1,0 +1,5 @@
+1) editar
+2) cambiar package.json version
+3) hacer el build
+4) publicar paquete
+5) hacer el push al repo
