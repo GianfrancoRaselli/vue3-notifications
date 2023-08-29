@@ -115,7 +115,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 
 		.v3n-btn-cross
 			cursor pointer
-			font-size 1.09em
+			font-size 1.1em
 			border 0
 			color var(--v3nBtnCross)
 			background-color var(--v3nBg)
