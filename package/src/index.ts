@@ -1,5 +1,5 @@
 import AppNotifications from './components/AppNotifications.vue';
-import { addNotification } from './composables/useNotifications';
+import { changeDefaultNotificationTimeout, addNotification } from './composables/useNotifications';
 
 import defaultOptions from './default-options';
 
@@ -27,6 +27,10 @@ function getOptions(userOptions?: Options) {
 	return options;
 }
 
+function setDefaultNotificationTimeout(defaultNotificationTimeout: Options['defaultNotificationTimeout']) {
+	changeDefaultNotificationTimeout(defaultNotificationTimeout);
+}
+
 function setRootColors(colors: Options['colors']) {
 	const root = document.querySelector(':root') as HTMLElement;
 	for (const key in colors) {
@@ -37,8 +41,9 @@ function setRootColors(colors: Options['colors']) {
 
 export default (app: App, userOptions?: Options) => {
 	const options = getOptions(userOptions);
+	setDefaultNotificationTimeout(options.defaultNotificationTimeout);
 	setRootColors(options.colors);
 	app.component('AppNotifications', AppNotifications);
 };
 
-export { addNotification };
+export { changeDefaultNotificationTimeout, addNotification };

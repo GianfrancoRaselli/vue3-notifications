@@ -1,4 +1,5 @@
 export type Options = {
+	defaultNotificationTimeout?: number,
 	colors?: {
 		main?: string;
 		mainDark?: string;
