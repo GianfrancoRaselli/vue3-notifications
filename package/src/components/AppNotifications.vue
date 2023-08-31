@@ -28,15 +28,15 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 			:class='lightMode ? "v3n-notification-type-" + notification.type : ["v3n-notification-dark", "v3n-notification-type-" + notification.type + "-dark"]'
 		)
 			span(v-text='typeof notification.message === "string" ? notification.message : notification.message()')
-			button.v3n-btn-cross(
+			button.v3n-cross-btn(
 				type='button',
-				:class='{ "v3n-btn-cross-dark": !lightMode }',
+				:class='{ "v3n-cross-btn-dark": !lightMode }',
 				@click='removeNotification(notification.id)'
 			) X
-		button.v3n-btn-remove-all(
+		button.v3n-remove-all-btn(
 			v-if='notifications.length > 1',
 			type='button',
-			:class='{ "v3n-btn-remove-all-dark": !lightMode }',
+			:class='{ "v3n-remove-all-btn-dark": !lightMode }',
 			@click='removeNotifications',
 			v-text='removeAllMessage'
 		)
@@ -113,7 +113,7 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 			&-dark
 				border-left-color var(--v3nBorderLeftErrorDark)
 
-		.v3n-btn-cross
+		.v3n-cross-btn
 			cursor pointer
 			font-size 1.1em
 			border 0
@@ -125,9 +125,9 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 				color var(--v3nBtnCrossDark)
 				background-color var(--v3nBgDark)
 
-	.v3n-btn-remove-all
+	.v3n-remove-all-btn
 		cursor pointer
-		font-size 0.98em
+		font-size 1em
 		float right
 		padding 0.3em 0.8em
 		border 0
