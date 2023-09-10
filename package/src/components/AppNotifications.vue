@@ -5,18 +5,18 @@ import { notifications, removeNotification, removeNotifications } from '../compo
 const props = withDefaults(
 	defineProps<{
 		removeAllMessage?: string | (() => string);
-		lightMode?: boolean | (() => boolean);
+		isLightMode?: boolean | (() => boolean);
 	}>(),
 	{
 		removeAllMessage: 'Remove all',
-		lightMode: true,
+		isLightMode: true,
 	},
 );
 
 const removeAllMessage = computed(() =>
 	typeof props.removeAllMessage === 'string' ? props.removeAllMessage : props.removeAllMessage(),
 );
-const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.lightMode : props.lightMode()));
+const isLightMode = computed(() => (typeof props.isLightMode === 'boolean' ? props.isLightMode : props.isLightMode()));
 </script>
 
 <template lang="pug">
@@ -25,18 +25,18 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 		.v3n-notification(
 			v-for='notification in notifications',
 			:key='notification.id',
-			:class='lightMode ? "v3n-notification-type-" + notification.type : ["v3n-notification-dark", "v3n-notification-type-" + notification.type + "-dark"]'
+			:class='isLightMode ? "v3n-notification-type-" + notification.type : ["v3n-notification__dark", "v3n-notification-type-" + notification.type + "__dark"]'
 		)
 			span(v-text='typeof notification.message === "string" ? notification.message : notification.message()')
 			button.v3n-cross-btn(
 				type='button',
-				:class='{ "v3n-cross-btn-dark": !lightMode }',
+				:class='{ "v3n-cross-btn__dark": !isLightMode }',
 				@click='removeNotification(notification.id)'
 			) X
 		button.v3n-remove-all-btn(
 			v-if='notifications.length > 1',
 			type='button',
-			:class='{ "v3n-remove-all-btn-dark": !lightMode }',
+			:class='{ "v3n-remove-all-btn__dark": !isLightMode }',
 			@click='removeNotifications',
 			v-text='removeAllMessage'
 		)
@@ -49,9 +49,6 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 	bottom 0.6rem
 	right 0.4rem
 	z-index 10000
-
-	@media (max-width: 720px)
-		font-size 1.06rem
 
 	.v3n-notification-enter-active
 	.v3n-notification-leave-active
@@ -66,7 +63,6 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 		transition transform 0.8s ease
 
 	.v3n-notification
-		font-size 1.03em
 		word-break break-word
 		word-wrap break-word
 		width 20em
@@ -75,67 +71,72 @@ const lightMode = computed(() => (typeof props.lightMode === 'boolean' ? props.l
 		border-left-style solid
 		border-radius 0.5em
 		margin-bottom 0.6em
-		box-shadow var(--v3nNotificationShadow) 0px 0px 5px
-		color var(--v3nMain)
-		background-color var(--v3nBg)
+		box-shadow var(--v3nNotificationShadowColor) 0px 0px 5px
+		color var(--v3nMainColor)
+		background-color var(--v3nBgColor)
 		display flex
 		flex-direction row
 		justify-content space-between
 		align-items center
 		gap 0.6em
 
-		&-dark
-			box-shadow var(--v3nNotificationShadowDark) 0px 0px 5px
-			color var(--v3nMainDark)
-			background-color var(--v3nBgDark)
+		&__dark
+			box-shadow var(--v3nNotificationShadowDarkColor) 0px 0px 5px
+			color var(--v3nMainDarkColor)
+			background-color var(--v3nBgDarkColor)
 
 		&.v3n-notification-type-info
-			border-left-color var(--v3nBorderLeftInfo)
+			border-left-color var(--v3nBorderLeftInfoColor)
 
-			&-dark
-				border-left-color var(--v3nBorderLeftInfoDark)
+			&__dark
+				border-left-color var(--v3nBorderLeftInfoDarkColor)
 
 		&.v3n-notification-type-success
-			border-left-color var(--v3nBorderLeftSuccess)
+			border-left-color var(--v3nBorderLeftSuccessColor)
 
-			&-dark
-				border-left-color var(--v3nBorderLeftSuccessDark)
+			&__dark
+				border-left-color var(--v3nBorderLeftSuccessDarkColor)
 
 		&.v3n-notification-type-warning
-			border-left-color var(--v3nBorderLeftWarning)
+			border-left-color var(--v3nBorderLeftWarningColor)
 
-			&-dark
-				border-left-color var(--v3nBorderLeftWarningDark)
+			&__dark
+				border-left-color var(--v3nBorderLeftWarningDarkColor)
 
 		&.v3n-notification-type-error
-			border-left-color var(--v3nBorderLeftError)
+			border-left-color var(--v3nBorderLeftErrorColor)
 
-			&-dark
-				border-left-color var(--v3nBorderLeftErrorDark)
+			&__dark
+				border-left-color var(--v3nBorderLeftErrorDarkColor)
 
 		.v3n-cross-btn
 			cursor pointer
 			font-size 1.1em
 			border 0
-			color var(--v3nBtnCross)
-			background-color var(--v3nBg)
+			color var(--v3nBtnCrossColor)
+			background-color var(--v3nBgColor)
 			align-self start
 
-			&-dark
-				color var(--v3nBtnCrossDark)
-				background-color var(--v3nBgDark)
+			&__dark
+				color var(--v3nBtnCrossDarkColor)
+				background-color var(--v3nBgDarkColor)
 
 	.v3n-remove-all-btn
 		cursor pointer
-		font-size 1em
 		float right
 		padding 0.3em 0.8em
 		border 0
 		border-radius 0.2em
-		color var(--v3nBtnRemoveAll)
-		background-color var(--v3nBg)
+		color var(--v3nBtnRemoveAllColor)
+		background-color var(--v3nBgColor)
 
-		&-dark
-			color var(--v3nBtnRemoveAllDark)
-			background-color var(--v3nBgDark)
+		&:hover
+			background-color var(--v3nBgHover)
+
+		&__dark
+			color var(--v3nBtnRemoveAllDarkColor)
+			background-color var(--v3nBgDarkColor)
+
+			&:hover
+				background-color var(--v3nBgHoverDark)
 </style>

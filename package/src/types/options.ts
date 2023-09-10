@@ -1,10 +1,12 @@
 export type Options = {
 	defaultNotificationTimeout?: number,
 	colors?: {
-		main?: string;
-		mainDark?: string;
-		bg?: string;
-		bgDark?: string;
+		primary?: string;
+		primaryDark?: string;
+		bgPrimary?: string;
+		bgPrimaryDark?: string;
+		bgHover?: string;
+		bgHoverDark?: string;
 		notificationShadow?: string;
 		notificationShadowDark?: string;
 		btnCross?: string;

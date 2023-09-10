@@ -34,7 +34,7 @@ function setRootColors(colors: Options['colors']) {
 	const root = document.querySelector(':root') as HTMLElement;
 	for (const key in colors) {
 		const colorValue = colors[key];
-		root.style.setProperty(`--v3n${key.charAt(0).toUpperCase()}${key.slice(1)}`, colorValue);
+		root.style.setProperty(`--v3n${key.charAt(0).toUpperCase()}${key.slice(1)}Color`, colorValue);
 	}
 }
 
