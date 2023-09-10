@@ -131,12 +131,12 @@ const isLightMode = computed(() => (typeof props.isLightMode === 'boolean' ? pro
 		background-color var(--v3nBgPrimaryColor)
 
 		&:hover
-			background-color var(--v3nBgHover)
+			background-color var(--v3nBgHoverColor)
 
 		&__dark
 			color var(--v3nBtnRemoveAllDarkColor)
 			background-color var(--v3nBgPrimaryDarkColor)
 
 			&:hover
-				background-color var(--v3nBgHoverDark)
+				background-color var(--v3nBgHoverDarkColor)
 </style>

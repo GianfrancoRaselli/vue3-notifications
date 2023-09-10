@@ -1,6 +1,6 @@
 {
 	"name": "@gianrase/vue3-notifications",
-	"version": "1.6.2",
+	"version": "1.6.4",
 	"description": "Easy-configurable Vue3 notification system.",
 	"type": "module",
 	"files": [
