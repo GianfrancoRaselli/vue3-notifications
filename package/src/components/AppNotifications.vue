@@ -72,8 +72,8 @@ const isLightMode = computed(() => (typeof props.isLightMode === 'boolean' ? pro
 		border-radius 0.5em
 		margin-bottom 0.6em
 		box-shadow var(--v3nNotificationShadowColor) 0px 0px 5px
-		color var(--v3nMainColor)
-		background-color var(--v3nBgColor)
+		color var(--v3nPrimaryColor)
+		background-color var(--v3nBgPrimaryColor)
 		display flex
 		flex-direction row
 		justify-content space-between
@@ -82,8 +82,8 @@ const isLightMode = computed(() => (typeof props.isLightMode === 'boolean' ? pro
 
 		&__dark
 			box-shadow var(--v3nNotificationShadowDarkColor) 0px 0px 5px
-			color var(--v3nMainDarkColor)
-			background-color var(--v3nBgDarkColor)
+			color var(--v3nPrimaryDarkColor)
+			background-color var(--v3nBgPrimaryDarkColor)
 
 		&.v3n-notification-type-info
 			border-left-color var(--v3nBorderLeftInfoColor)
@@ -114,12 +114,12 @@ const isLightMode = computed(() => (typeof props.isLightMode === 'boolean' ? pro
 			font-size 1.1em
 			border 0
 			color var(--v3nBtnCrossColor)
-			background-color var(--v3nBgColor)
+			background-color var(--v3nBgPrimaryColor)
 			align-self start
 
 			&__dark
 				color var(--v3nBtnCrossDarkColor)
-				background-color var(--v3nBgDarkColor)
+				background-color var(--v3nBgPrimaryDarkColor)
 
 	.v3n-remove-all-btn
 		cursor pointer
@@ -128,14 +128,14 @@ const isLightMode = computed(() => (typeof props.isLightMode === 'boolean' ? pro
 		border 0
 		border-radius 0.2em
 		color var(--v3nBtnRemoveAllColor)
-		background-color var(--v3nBgColor)
+		background-color var(--v3nBgPrimaryColor)
 
 		&:hover
 			background-color var(--v3nBgHover)
 
 		&__dark
 			color var(--v3nBtnRemoveAllDarkColor)
-			background-color var(--v3nBgDarkColor)
+			background-color var(--v3nBgPrimaryDarkColor)
 
 			&:hover
 				background-color var(--v3nBgHoverDark)
