@@ -48,7 +48,7 @@ const isLightMode = computed(() => (typeof props.isLightMode === 'boolean' ? pro
 	position fixed
 	bottom 0.6rem
 	right 0.4rem
-	z-index 10000
+	z-index 99999999999999
 
 	.v3n-notification-enter-active
 	.v3n-notification-leave-active
